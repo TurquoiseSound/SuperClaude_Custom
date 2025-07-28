@@ -1,4 +1,5 @@
 # SuperClaude v3 🚀
+
 [![Website Preview](https://img.shields.io/badge/Visit-Website-blue?logo=google-chrome)](https://superclaude-org.github.io/SuperClaude_Website/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://img.shields.io/pypi/v/SuperClaude.svg)](https://pypi.org/project/SuperClaude/)
@@ -15,8 +16,9 @@ A framework that extends Claude Code with specialized commands, personas, and MC
 ## What is SuperClaude? 🤔
 
 SuperClaude tries to make Claude Code more helpful for development work by adding:
+
 - 🛠️ **16 specialized commands** for common dev tasks (some work better than others!)
-- 🎭 **Smart personas** that usually pick the right expert for different domains 
+- 🎭 **Smart personas** that usually pick the right expert for different domains
 - 🔧 **MCP server integration** for docs, UI components, and browser automation
 - 📋 **Task management** that tries to keep track of progress
 - ⚡ **Token optimization** to help with longer conversations
@@ -26,13 +28,15 @@ This is what we've been building to make development workflows smoother. Still r
 ## Current Status 📊
 
 ✅ **What's Working Well:**
+
 - Installation suite (rewritten from the ground up)
-- Core framework with 9 documentation files 
+- Core framework with 9 documentation files
 - 16 slash commands for various development tasks
 - MCP server integration (Context7, Sequential, Magic, Playwright)
 - Unified CLI installer for easy setup
 
 ⚠️ **Known Issues:**
+
 - This is an initial release - bugs are expected
 - Some features may not work perfectly yet
 - Documentation is still being improved
@@ -41,6 +45,7 @@ This is what we've been building to make development workflows smoother. Still r
 ## Key Features ✨
 
 ### Commands 🛠️
+
 We focused on 16 essential commands for the most common tasks:
 
 **Development**: `/sc:implement`, `/sc:build`, `/sc:design`  
@@ -49,7 +54,9 @@ We focused on 16 essential commands for the most common tasks:
 **Others**: `/sc:document`, `/sc:git`, `/sc:estimate`, `/sc:task`, `/sc:index`, `/sc:load`, `/sc:spawn`
 
 ### Smart Personas 🎭
+
 AI specialists that try to jump in when they seem relevant:
+
 - 🏗️ **architect** - Systems design and architecture stuff
 - 🎨 **frontend** - UI/UX and accessibility  
 - ⚙️ **backend** - APIs and infrastructure
@@ -58,18 +65,20 @@ AI specialists that try to jump in when they seem relevant:
 - ✍️ **scribe** - Documentation and writing
 - *...and 5 more specialists*
 
-*(They don't always pick perfectly, but usually get it right!)*
+// *(They don't always pick perfectly, but usually get it right!)*
 
 ### MCP Integration 🔧
+
 External tools that connect when useful:
-- **Context7** - Grabs official library docs and patterns 
+
+- **Context7** - Grabs official library docs and patterns
 - **Sequential** - Helps with complex multi-step thinking  
-- **Magic** - Generates modern UI components 
+- **Magic** - Generates modern UI components
 - **Playwright** - Browser automation and testing stuff
 
-*(These work pretty well when they connect properly! 🤞)*
+// *(These work pretty well when they connect properly! 🤞)*
 
-## ⚠️ Upgrading from v2? Important!
+## ⚠️ Upgrading from v2? Important
 
 If you're coming from SuperClaude v2, you'll need to clean up first:
 
@@ -77,15 +86,17 @@ If you're coming from SuperClaude v2, you'll need to clean up first:
 2. **Manual cleanup** - delete these if they exist:
    - `SuperClaude/`
    - `~/.claude/shared/`
-   - `~/.claude/commands/` 
+   - `~/.claude/commands/`
    - `~/.claude/CLAUDE.md`
-4. **Then proceed** with v3 installation below
+3. **Then proceed** with v3 installation below
 
 This is because v3 has a different structure and the old files can cause conflicts.
 
 ### 🔄 **Key Change for v2 Users**
+
 **The `/build` command changed!** In v2, `/build` was used for feature implementation. In v3:
-- `/sc:build` = compilation/packaging only 
+
+- `/sc:build` = compilation/packaging only
 - `/sc:implement` = feature implementation (NEW!)
 
 **Migration**: Replace `v2 /build myFeature` with `v3 /sc:implement myFeature`
@@ -93,22 +104,26 @@ This is because v3 has a different structure and the old files can cause conflic
 ## Installation 📦
 
 SuperClaude installation is a **two-step process**:
+
 1. First install the Python package
 2. Then run the installer to set up Claude Code integration
 
 ### Step 1: Install the Package
 
-**Option A: From PyPI (Recommended)**
+#### Option A: From PyPI (Recommended)
+
 ```bash
 uv add SuperClaude
 ```
 
-**Option B: From Source**
+#### Option B: From Source
+
 ```bash
 git clone https://github.com/SuperClaude-Org/SuperClaude_Framework.git
 cd SuperClaude
 uv sync
 ```
+
 ### 🔧 UV / UVX Setup Guide
 
 SuperClaude v3 also supports installation via [`uv`](https://github.com/astral-sh/uv) (a faster, modern Python package manager) or `uvx` for cross-platform usage.
@@ -153,13 +168,14 @@ Or using bash-style CLI:
 SuperClaude install
 ```
 
-### 🧠 Note:
+### 🧠 Note
 
-* `uv` provides better caching and performance.
-* Compatible with Python 3.8+ and works smoothly with SuperClaude.
+- `uv` provides better caching and performance.
+- Compatible with Python 3.8+ and works smoothly with SuperClaude.
 
 ---
 **Missing Python?** Install Python 3.7+ first:
+
 ```bash
 # Linux (Ubuntu/Debian)
 sudo apt update && sudo apt install python3 python3-pip
@@ -174,10 +190,13 @@ brew install python3
 ### Step 2: Run the Installer
 
 After installing the package, run the SuperClaude installer to configure Claude Code (You can use any of the method):
-### ⚠️ Important Note 
+
+### ⚠️ Important Note
+
 **After installing the SuperClaude.**
 **You can use `SuperClaude commands`
 , `python3 -m SuperClaude commands` or also `python3 SuperClaude commands`**
+
 ```bash
 # Quick setup (recommended for most users)
 python3 SuperClaude install
@@ -193,8 +212,11 @@ python3 SuperClaude install --profile developer
 
 # See all available options
 python3 SuperClaude install --help
+
 ```
+
 ### Or Python Modular Usage
+
 ```bash
 # Quick setup (recommended for most users)
 python3 -m SuperClaude install
@@ -210,8 +232,11 @@ python3 -m SuperClaude install --profile developer
 
 # See all available options
 python3 -m SuperClaude install --help
+
 ```
-### Simple bash Command Usage 
+
+### Simple bash Command Usage
+
 ```bash
 # Quick setup (recommended for most users)
 SuperClaude install
@@ -245,17 +270,19 @@ Most of the time it plays nicely with Claude Code's existing stuff. 🤝
 ## What's Coming in v4 🔮
 
 We're hoping to work on these things for the next version:
+
 - **Hooks System** - Event-driven stuff (removed from v3, trying to redesign it properly)
 - **MCP Suite** - More external tool integrations  
 - **Better Performance** - Trying to make things faster and less buggy
 - **More Personas** - Maybe a few more domain specialists
 - **Cross-CLI Support** - Might work with other AI coding assistants
 
-*(No promises on timeline though - we're still figuring v3 out! 😅)*
+// *(No promises on timeline though - we're still figuring v3 out! 😅)*
 
 ## Configuration ⚙️
 
 After installation, you can customize SuperClaude by editing:
+
 - `~/.claude/settings.json` - Main configuration
 - `~/.claude/*.md` - Framework behavior files
 
@@ -276,6 +303,7 @@ These guides have more details than this README and are kept up to date.
 ## Contributing 🤝
 
 We welcome contributions! Areas where we could use help:
+
 - 🐛 **Bug Reports** - Let us know what's broken
 - 📝 **Documentation** - Help us explain things better  
 - 🧪 **Testing** - More test coverage for different setups
@@ -285,7 +313,8 @@ The codebase is pretty straightforward Python + documentation files.
 
 ## Project Structure 📁
 
-```
+``` markdown.md
+
 SuperClaude/
 ├── setup.py               # pypi setup file
 ├── SuperClaude/           # Framework files  
@@ -299,6 +328,7 @@ SuperClaude/
 ## Architecture Notes 🏗️
 
 The v3 architecture focuses on:
+
 - **Simplicity** - Removed complexity that wasn't adding value
 - **Reliability** - Better installation and fewer breaking changes  
 - **Modularity** - Pick only the components you want
@@ -325,17 +355,8 @@ A: The basic stuff works pretty well, but definitely expect some rough edges sin
 
 MIT - [See LICENSE file for details](https://opensource.org/licenses/MIT)
 
-## Star History
-
-<a href="https://www.star-history.com/#NomenAK/SuperClaude&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=NomenAK/SuperClaude&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=NomenAK/SuperClaude&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=NomenAK/SuperClaude&type=Date" />
- </picture>
-</a>
 ---
 
-*Built by developers who got tired of generic responses. Hope you find it useful! 🙂*
+// *Built by developers who got tired of generic responses. Hope you find it useful! 🙂*
 
 ---
